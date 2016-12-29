@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-sacle=1">
+    <title>Html5</title>
+    <style>
+
+    * {
+	-webkit-transition: all 1s; 
+	}
+    .side, .content, .left, .right, .con_right, .con_left, .wrap
+    {
+        font-size: 1.6em;
+    }
+     body{
+        font-family: Arial;
+        color:#292421;
+        transition-delay:10s;
+        -webkit-transition-delay:10s;
+        font-size: 62.5%;
+    }
+    .line{
+        clear: both;
+        height: 10px;
+        /* background: #40E0D0; */
+        width: 100%;
+    }
+
+    /* float 两列布局 */
+
+    /* 第一种 */
+
+    .main{
+    	width: 100%;
+    	float: right;
+    	margin-left:-220px;
+    	background: #ccc;
+    }
+    .content{
+    	margin-left:220px; 
+    }
+    .side{
+    	float: left;
+    	width:200px;
+    	background: #D2691E;
+    }
+
+    /* 第二种 */
+    .left{
+    	width: 100%;
+    	float: left;
+    	margin-right:-220px;
+    	background: #3D59AB; 
+    	margin-bottom:10px; 
+        color:#FF7F50;
+    }
+    .right{
+    	float: right;
+    	width: 200px;
+    	background: #87CEEB;
+    }
+
+    /* 第三种 */
+    .contain{
+    	clear: both;
+    	width: 100%;
+    	margin:20px auto;
+    }
+    .con_left{
+    	margin-right:200px; 
+    	background: #33A1C9;
+    }
+    .con_right{
+    	float: right;
+    	width: 200px;
+    	background: #7CFC00;
+    }
+
+    /* float 两列布局结束 */
+    
+    
+    /* float 三列布局 */
+    
+    .wrap{
+        width:100%;
+        border: 1px solid;
+        overflow: hidden;
+    }
+    .main-3{
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    #A{
+        margin: 0 200px;
+        background-color: #f60;
+    }
+    #B{
+        float: left;
+        width: 200px;
+        margin-left: -100%;
+        background-color: #6f0;
+    }
+    #C{
+        float: left;
+        width:200px;
+        margin-left: -200px;
+        background-color: #06f;
+    }
+
+    /* display 两列布局 */
+
+    .des{
+        color: #00C78C;
+        font-family: Arial;
+    }
+   
+    .dis-contain{
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        font-size: 0;
+        margin-bottom: 20px;
+    }
+    .dis-left{
+        width:15%;
+        display: inline-block;
+        background: #FF6100;
+        font-size: 16px;
+        /* min-width: 200px; */
+    }
+    .dis-right{
+        width:85%;
+        display: inline-block;
+        background: #8B4513;
+        font-size: 16px;
+        min-width: 200px;
+    }
+
+    /* display 三列布局 */
+    
+    .dis-wrap{
+        display: inline-block;
+        width:100%;
+        border: 1px solid;
+        vertical-align: top;
+        font-size: 0;
+    }
+    .wrap-left{
+        display: inline-block;
+        width: 15%;
+        background-color: #6f0;
+        font-size: 16px;
+    }
+    .wrap-right{
+        display: inline-block;
+        width: 15%;
+        background-color: #06f;
+        font-size: 16px;
+    }
+    .wrap-main{
+        display: inline-block;
+        width: 70%;
+        background-color: #f60;
+        font-size: 16px;
+        text-align: center;
+    }
+
+
+    /* 箭头 */
+    .left-row{
+        width: 0;
+        height: 0;
+        border-width:9px;
+        border-color:transparent transparent transparent #D2691E;
+        border-style: dashed dashed dashed solid ;
+        float:left;
+    }
+    .right-row{
+        width: 0;
+        height: 0;
+        border-width:9px;
+        border-color:transparent #87CEEB transparent transparent;
+        border-style: dashed solid dashed dashed;
+        float:right;
+    }
+    .right-row2{
+        width: 0;
+        height: 0;
+        border-width:9px;
+        border-color:transparent #7CFC00 transparent transparent;
+        border-style: dashed solid dashed dashed;
+        float:right;
+    }
+    .display-row{
+        width: 0;
+        height: 0;
+        border-width:9px;
+        border-color:transparent #8B4513 transparent transparent ;
+        border-style: dashed solid dashed dashed;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -19px;
+    }
+    .left-row-b{
+        width: 0;
+        height: 0;
+        border-width:9px;
+        border-color:transparent transparent transparent #6f0;
+        border-style: dashed dashed dashed solid ;
+        float:left;
+        margin-left: 200px;
+    }
+    .right-row-c{
+        width: 0;
+        height: 0;
+        border-width:9px;
+        border-color:transparent #06f transparent transparent;
+        border-style: dashed solid dashed dashed ;
+        float:right;
+        margin-right: 200px;
+        margin-top: -18px;
+    }
+    .main-row-left{
+        width: 0;
+        height: 0;
+        border-width:9px;
+        border-color:transparent #f60 transparent transparent ;
+        border-style: dashed solid dashed dashed;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -19px;
+    }
+    .main-row-right{
+        width: 0;
+        height: 0;
+        border-width:9px;
+        border-color:#06f #06f #06f #f60;
+        border-style: dashed dashed dashed solid;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -17px;
+    }
+    </style>
+</head>
+<body>
+	<header>html5</header>
+	<nav>
+		<!-- Navigation -->
+	</nav>
+	<section id = "intro">
+		<!-- Introduction -->
+	</section>
+	<section>
+		<!-- Mian content area -->
+		<!-- 两列布局实现 -->
+		<h1 class="des">Float</h1>
+		<!-- 方法1 -->
+		<div class="main">
+			<div class="content">RightSide</div>
+		</div>
+		<div class="side">LeftSide</div>
+        <div class="left-row"></div>
+		<div class="line"></div>
+		
+		<div class="left">LeftSide</div>
+		<div class="right">RightSide</div>
+        <div class="right-row"></div>
+		
+		<!-- 方法2 -->
+		<div class="contain">
+			<div class="con_right">RightSide</div>
+            <div class="right-row2"></div>
+			<div class="con_left">LeftSide</div>
+		</div>
+
+        <!-- 三列布局 -->
+
+        <div class="wrap">
+           
+            <div class="main-3">
+                <div class="left-row-b"></div>
+                <div id="A">Main</div>
+            </div>
+            <div id="B">LeftSide</div>
+            <div id="C">RightSide</div>
+            <div class="right-row-c"></div>
+        </div>
+
+
+
+		<h1 class="des">Display</h1>
+
+		<div class="dis-contain">
+			<div class="dis-left">LeftSide</div>
+            <div class="display-row"></div>
+			<div class="dis-right">RightSide</div>
+		</div>
+
+        <div class="dis-wrap">
+            <div class="wrap-left">LeftSide</div>
+            <div class="main-row-left"></div>
+            <div class="wrap-main">Main</div>
+            <div class="main-row-right"></div>
+            <div class="wrap-right">RightSide</div>
+        </div>
+
+
+       
+        
+	</section>
+	<aside>
+		<!-- Sidebar -->
+	</aside>
+	<footer>
+		<!-- Footer -->
+	</footer>
+    
+</body>
+</html>
